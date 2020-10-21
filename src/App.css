@@ -1,38 +1,527 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+}
+
 .App {
-  text-align: center;
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sideNav {
+  background-color: rgb(31, 33, 59);
+  flex: 0 0 459px;
+  min-height: 1023px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sideNavHeader {
+  margin-top: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 45px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchInput {
+  width: 161px;
+  padding: 11px 18px;
+  background: #6e707a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: none;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #e7e7eb;
+}
+
+.searchInput::placeholder {
+  color: #e7e7eb;
+}
+
+/* .backImage{
+  background-image: url("./img/Cloud-background.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+} */
+
+.weatherTypeImage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 33px;
+}
+
+.tempDateLocInfoBox {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.temperatureBox {
+  height: 169px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 87px;
+  max-width: 192px;
+  height: 169px;
 }
 
-.App-link {
-  color: #61dafb;
+.temperatureText {
+  font-weight: 500;
+  font-size: 80px;
+  font-style: normal;
+  color: #e7e7eb;
+}
+.temperatureIcon {
+  font-size: 40px;
+  color: #a09fb1;
+  font-weight: 100;
+  position: relative;
+  top: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.weatherType {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  color: #a09fb1;
+  margin-bottom: 87px;
+}
+
+.dateBox {
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #88869d;
+  width: 224px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.todayTempWeekDay {
+  margin-right: 5px;
+}
+
+.todayTempNumberDay {
+  margin-right: 2px;
+  position: relative;
+  top: 1px;
+}
+
+.locationBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #88869d;
+}
+
+.locationText {
+  margin-left: 9px;
+}
+
+/* CONTENT */
+
+.content {
+  background-color: rgb(17, 15, 29);
+  flex: 0 0 981px;
+  padding: 148px 123px 155px 154px;
+  /* min-height: 1023px; */
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 704px;
+}
+
+.tempCardsBox {
+  max-width: 300px;
+  height: 177px;
+  display: flex;
+  margin-bottom: 72px;
+}
+
+.tempCard {
+  max-width: 120px;
+  height: 177px;
+  background: #1e213a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.tempCard:not(:last-child) {
+  margin-right: 26px;
+}
+
+.highlightTitle {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #e7e7eb;
+}
+
+.highlightCardsBox {
+  display: flex;
+  margin-top: 32px;
+}
+
+.highLightLeftCards {
+  display: flex;
+  flex-direction: column;
+  margin-right: 48px;
+}
+
+.windCard {
+  width: 328px;
+  height: 204px;
+  background: #1e213a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 48px;
+}
+
+.windStatusLocBox {
+  display: flex;
+  align-items: center;
+  color: #e7e7eb;
+}
+
+.windStatusText {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 22px;
+  margin-bottom: 6px;
+  color: #e7e7eb;
+}
+.windStatusNumber {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 75.14px;
+  color: #e7e7eb;
+}
+
+.windStatusUnit {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 16px;
+  color: #e7e7eb;
+}
+
+.windStatusLocText {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 5.71px;
+}
+
+.visibilityCard {
+  width: 328px;
+  height: 159px;
+  background: #1e213a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.visibiltyText {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #e7e7eb;
+}
+.visibilityNumber {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+  color: #e7e7eb;
+}
+
+.visibilityUnit {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42.6px;
+  color: #e7e7eb;
+  margin-left: 5.71px;
+}
+
+.highLightRightCards {
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+}
+
+.humidityCard {
+  width: 328px;
+  height: 204px;
+  background: #1e213a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 48px;
+}
+
+.humidityText {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #e7e7eb;
+  margin-top: 22px;
+  margin-bottom: 11px;
+  position: relative;
+  top: 9px;
+}
+
+.humitdityPercentageBox {
+  margin-bottom: 28px;
+}
+
+.humidityNumber {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+  color: #e7e7eb;
+  position: relative;
+  top: 15px;
+}
+.humidityUnit {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42.26px;
+  color: #e7e7eb;
+  position: relative;
+  top: 15px;
+}
+
+.humidityPercentageNumbers {
+  width: 229px;
+  display: flex;
+  justify-content: space-between;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #a09fb1;
+  position: relative;
+}
+
+.rectangle {
+  position: relative;
+  top: 15px;
+  margin-bottom: 8px;
+}
+.rectanglePercentage {
+  width: 229px;
+  text-align: end;
+  margin-top: 4px;
+  color: #a09fb1;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.airPressureCard {
+  width: 328px;
+  height: 159px;
+  background: #1e213a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.airPressureText {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #e7e7eb;
+}
+
+.airPressureNumber {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+  color: #e7e7eb;
+}
+
+.airPressureUnit {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42.6px;
+  color: #e7e7eb;
+  margin-left: 5.71px;
+}
+
+/* tempCards*/
+
+.cardDate {
+  margin: 18px 22px 10px 22px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #e7e7eb;
+}
+
+.tempImage {
+  /* margin: 10px 31px 31px 32px; */
+  height: 62px;
+  margin-bottom: 31px;
+}
+
+.tempDegree {
+  margin: 0px 20px 18px 21px;
+  font-family: Raleway;
+}
+
+.firstDegree {
+  margin-right: 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #e7e7eb;
+}
+
+.secondDegree {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #a09fb1;
+}
+
+@media (max-width: 700px) {
+  .App {
+    max-width: 375px;
+    flex-direction: column;
+    margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .content {
+    padding: 0px;
+  }
+
+  .contentBox {
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+  }
+
+  .tempCardsBox {
+    max-width: 300px;
+    flex-wrap: wrap;
+    height: 177px;
+    display: flex;
+    margin-left: 55px;
+    margin-top: 52px;
+  }
+
+  .tempCard {
+    max-width: 120px;
+    height: 177px;
+    background: #1e213a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .tempCard:not(:last-child) {
+    margin-bottom: 26px;
+  }
+
+  .highlightTitle{
+    margin-top:400px ;
+    margin-left: 21px;
+  }
+  .highlightCardsBox {
+    display: flex;
+    flex-direction: column;
+    margin: 33px 24px 86px 24px ;
+  
   }
 }
+
+/* .tempCFbox {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tempCbox {
+  width: 40px;
+  height: 40px;
+  background: #e7e7eb;
+  border-radius: 54px;
+  color: #110e3c;
+  padding: 10.48px 10.48px 9.52px 11.43px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 42px;
+} */
+
+/* .tempFbox {
+  width: 40px;
+  height: 40px;
+  background: #585676;
+  border-radius: 54px;
+  color: #e7e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 125px;
+  margin-top: 42px;
+} */
