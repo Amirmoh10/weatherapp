@@ -9,12 +9,12 @@ html {
 
 .App {
   display: flex;
+  min-height: 1023px;
 }
 
 .sideNav {
   background-color: rgb(31, 33, 59);
   flex: 0 0 459px;
-  height: 1023px;
 }
 
 .sideNavHeader {

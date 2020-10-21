@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-import MyLocationRoundedIcon from "@material-ui/icons/MyLocationRounded";
-import Avatar from "@material-ui/core/Avatar";
 import LocationOnRoundedIcon from "@material-ui/icons/LocationOnRounded";
 import DispatchContext from "../dispatchContext";
 import StateContext from "../stateContext";
@@ -17,17 +15,7 @@ import "../App.css";
 //   marginBottom: "33px",
 // };
 
-const avatarStyle = {
-  backgroundColor: "rgba(255, 255, 255, 0.2)",
-  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-  width: 40,
-  height: 40,
-};
-const locationIconStyle = {
-  fill: "#E7E7EB",
-  width: 22,
-  height: 22,
-};
+
 
 const imageStyle = {
   backgroundPosition: "center",
@@ -72,9 +60,7 @@ function SideNav() {
             onChange={onChange}
           />
         </form>
-        <Avatar style={avatarStyle}>
-          <MyLocationRoundedIcon variant="rounded" style={locationIconStyle} />
-        </Avatar>
+        
       </div>
 
 
@@ -151,3 +137,23 @@ function TempDate({ date }) {
   }
   return dateTime;
 }
+
+
+
+// <Avatar style={avatarStyle}>
+//   <MyLocationRoundedIcon variant="rounded" style={locationIconStyle} />
+// </Avatar>;
+
+// import MyLocationRoundedIcon from "@material-ui/icons/MyLocationRounded";
+// import Avatar from "@material-ui/core/Avatar";
+// const avatarStyle = {
+//   backgroundColor: "rgba(255, 255, 255, 0.2)",
+//   boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+//   width: 40,
+//   height: 40,
+// };
+// const locationIconStyle = {
+//   fill: "#E7E7EB",
+//   width: 22,
+//   height: 22,
+// };
