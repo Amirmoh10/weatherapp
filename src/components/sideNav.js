@@ -9,13 +9,13 @@ import { ACTION } from "../App";
 
 import "../App.css";
 
-const imageBackGround = {
-  backgroundPosition: "center",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  width: "115%",
-  marginBottom: "33px",
-};
+// const imageBackGround = {
+//   backgroundPosition: "center",
+//   backgroundSize: "cover",
+//   backgroundRepeat: "no-repeat",
+//   width: "115%",
+//   marginBottom: "33px",
+// };
 
 const avatarStyle = {
   backgroundColor: "rgba(255, 255, 255, 0.2)",

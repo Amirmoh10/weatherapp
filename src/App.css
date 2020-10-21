@@ -476,15 +476,18 @@ html {
     margin-bottom: 26px;
   }
 
-  .highlightTitle{
-    margin-top:400px ;
+  .highlightTitle {
+    margin-top: 400px;
     margin-left: 21px;
+  }
+
+  .visibilityCard {
+    margin-bottom: 48px;
   }
   .highlightCardsBox {
     display: flex;
     flex-direction: column;
-    margin: 33px 24px 86px 24px ;
-  
+    margin: 33px 24px 86px 24px;
   }
 }
 
