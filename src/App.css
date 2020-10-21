@@ -14,7 +14,7 @@ html {
 .sideNav {
   background-color: rgb(31, 33, 59);
   flex: 0 0 459px;
-  min-height: 1023px;
+  height: 1023px;
 }
 
 .sideNavHeader {
@@ -76,7 +76,7 @@ html {
 
 .temperatureText {
   font-weight: 500;
-  font-size: 80px;
+  font-size: 144px;
   font-style: normal;
   color: #e7e7eb;
 }
@@ -132,6 +132,7 @@ html {
   font-size: 18px;
   line-height: 21px;
   color: #88869d;
+  margin-bottom: 32px;
 }
 
 .locationText {
