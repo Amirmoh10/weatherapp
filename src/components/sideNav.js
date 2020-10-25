@@ -54,15 +54,14 @@ function SideNav() {
         <form className="sideNavSearchForm" onSubmit={onSubmit}>
           <input
             type="text"
+            spellcheck="false"
             placeholder="Seach for places"
             className="searchInput"
             value={`${sideNavState.typedPlace}`}
             onChange={onChange}
           />
         </form>
-        
       </div>
-
 
       {sideNavState.placeData[0] ? (
         <div>
